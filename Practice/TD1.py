@@ -40,9 +40,11 @@ def diviseurs(n):
     return res
 
 def is_first(n):
+    """ Return ?n premier"""
     return (len(diviseurs(n))==2)
 
 def list_first(n):
+    """ Return la liste des nombres premiers de 0 à n"""
     res = []
     for i in range(n):
         if is_first(i):
@@ -51,13 +53,24 @@ def list_first(n):
 
 #Exercice 3
 
-def perfect(n):
+def perfect(n,res = [],ind = 1):
     """
     Return la liste des n premiers nombres parfaits.
     Attention au test : le 5eme nombre est supérieur a 33 millions.
     """
-    res = []
-    
+    if len(res)>=n:
+        return res
+    sm = 0
+    for i in diviseurs(ind):
+        sm+=i
+    if sm == ind*2:
+        res.append(ind)
+    ind+=1
+    return perfect(n,res,ind)
 
-    return res
 
+#Exercice 4
+
+def list_first_eratho(n):
+
+    return
