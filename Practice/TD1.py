@@ -17,7 +17,7 @@ def fibo(n):
         a, b = b, a+b
     return res
 
-def fibo2(n):
+def fibo7(n):
     """ Return les n premiers termes de fibonacci multiple de 7. """
     a, b = 0, 1
     res = []
@@ -53,7 +53,7 @@ def list_first(n):
 
 #Exercice 3
 
-def perfect(n,res = [],ind = 1):
+def perfect(n,res = [],ind = 6):
     """
     Return la liste des n premiers nombres parfaits.
     Attention au test : le 5eme nombre est supérieur a 33 millions.
@@ -68,9 +68,11 @@ def perfect(n,res = [],ind = 1):
     ind+=1
     return perfect(n,res,ind)
 
+print (perfect (3))
 
 #Exercice 4
-
+"""
 def list_first_eratho(n):
 
     return
+"""
